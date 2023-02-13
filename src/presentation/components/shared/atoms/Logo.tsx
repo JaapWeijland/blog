@@ -1,12 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-export interface LogoProps {}
+export interface LogoProps {
+    to: string;
+}
 
 import logo from '../../../../../public/images/weijland-it-logo.png';
 
-export const Logo = ({}: LogoProps) => {
+export const Logo = ({ to }: LogoProps) => {
     return (
-        <div className="flex gap-5 items-center">
+        <Link href={to} className="flex gap-5 items-center no-underline">
             <Image alt="Weijland.IT" width={67} height={82} src={logo} />
             <div className="flex flex-col items-stretch gap-1">
                 <span className="font-black text-lg text-neutral-50 tracking-tighter">
@@ -16,6 +19,6 @@ export const Logo = ({}: LogoProps) => {
                     Hi, my name is Jaap. I blog about my projects.
                 </span>
             </div>
-        </div>
+        </Link>
     );
 };

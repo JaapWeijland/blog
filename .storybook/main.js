@@ -9,6 +9,12 @@ module.exports = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
+        {
+            name: '@storybook/preset-typescript',
+            options: {
+                tsconfig: path.resolve(__dirname, '../tsconfig.json'),
+            },
+        },
     ],
     framework: '@storybook/react',
     core: {
@@ -31,6 +37,11 @@ module.exports = {
             ],
             include: path.resolve(__dirname, '../'),
         });
+
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            '@blog': path.resolve(__dirname, '../src/'),
+        };
         // Return the altered config
         return config;
     },

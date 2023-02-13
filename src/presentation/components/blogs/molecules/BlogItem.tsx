@@ -14,7 +14,7 @@ export const BlogItem = ({
     to,
 }: BlogItemProps) => {
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col  sm:flex-row justify-between sm:items-center gap-4">
             <a
                 className="flex flex-col gap-2 items-stretch text-neutral-50 group cursor-pointer no-underline"
                 href={to}
@@ -31,7 +31,9 @@ export const BlogItem = ({
                 )}
                 {subTitle && <div className="font-light">{subTitle}</div>}
             </a>
-            <LinkButton to={to}>Read blog &rarr;</LinkButton>
+            <div className="hidden sm:flex">
+                <LinkButton to={to}>Read blog &rarr;</LinkButton>
+            </div>
         </div>
     );
 };

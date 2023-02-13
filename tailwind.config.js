@@ -14,5 +14,5 @@ module.exports = {
             primary: colors.orange,
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };

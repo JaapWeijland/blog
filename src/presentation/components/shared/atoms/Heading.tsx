@@ -6,7 +6,7 @@ export interface HeadingProps {
 
 export const Heading = ({ children }: HeadingProps) => {
     return (
-        <span className="text-5xl font-bold text-neutral-50 tracking-tighter">
+        <span className="text-5xl pb-2 font-bold text-neutral-50 tracking-tighter">
             {children}
         </span>
     );

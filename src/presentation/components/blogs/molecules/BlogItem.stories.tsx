@@ -13,3 +13,10 @@ export default {
 export const Singular: ComponentStory<typeof BlogItem> = (args) => (
     <BlogItem {...args} />
 );
+
+Singular.args = {
+    to: '/',
+    superTitle: '17 januari 2022',
+    title: "Why you don't need Redux",
+    subTitle: 'A small blog to tell you a thing or two',
+};
