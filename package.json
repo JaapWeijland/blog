@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@next/font": "^13.1.6",
@@ -28,23 +28,26 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/addon-actions": "^7.0.0-beta.47",
+    "@storybook/addon-essentials": "^7.0.0-beta.47",
+    "@storybook/addon-interactions": "^7.0.0-beta.47",
+    "@storybook/addon-links": "^7.0.0-beta.47",
+    "@storybook/nextjs": "^7.0.0-beta.47",
     "@storybook/preset-typescript": "^3.0.0",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/react": "^7.0.0-beta.47",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/luxon": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.3",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-storybook": "^0.6.10",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6"
+    "storybook": "^7.0.0-beta.47",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.2.6",
+    "util": "^0.12.5"
   }
 }

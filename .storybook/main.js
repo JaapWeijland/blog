@@ -1,48 +1,34 @@
 const path = require('path');
-
 module.exports = {
-    stories: [
-        '../src/**/*.stories.mdx',
-        '../src/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
-    addons: [
-        '@storybook/addon-links',
-        '@storybook/addon-essentials',
-        '@storybook/addon-interactions',
-        {
-            name: '@storybook/preset-typescript',
-            options: {
-                tsconfig: path.resolve(__dirname, '../tsconfig.json'),
-            },
-        },
-    ],
-    framework: '@storybook/react',
-    core: {
-        builder: '@storybook/builder-webpack5',
-    },
-    webpackFinal: async (config) => {
-        config.module.rules.push({
-            test: /\.css$/i,
-            use: [
-                {
-                    // loader: 'postcss-loader',
-                    // options: { implementation: require.resolve('postcss') },
-                    loader: 'postcss-loader',
-                    options: {
-                        postcssOptions: {
-                            plugins: () => [require('autoprefixer')()],
-                        },
-                    },
-                },
-            ],
-            include: path.resolve(__dirname, '../'),
-        });
-
-        config.resolve.alias = {
-            ...config.resolve.alias,
-            '@blog': path.resolve(__dirname, '../src/'),
-        };
-        // Return the altered config
-        return config;
-    },
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
+  framework: {
+    name: '@storybook/nextjs',
+    options: {}
+  },
+  webpackFinal: async config => {
+    config.module.rules.push({
+      test: /\.css$/i,
+      use: [{
+        // loader: 'postcss-loader',
+        // options: { implementation: require.resolve('postcss') },
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: () => [require('autoprefixer')()]
+          }
+        }
+      }],
+      include: path.resolve(__dirname, '../')
+    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@blog': path.resolve(__dirname, '../src/')
+    };
+    // Return the altered config
+    return config;
+  },
+  docs: {
+    autodocs: true
+  }
 };

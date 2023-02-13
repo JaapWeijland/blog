@@ -1,5 +1,5 @@
+import '@blog/styles/globals.css';
 import { Inter } from '@next/font/google';
-import 'blog/styles/globals.css';
 import 'highlight.js/styles/stackoverflow-dark.css';
 import type { AppProps } from 'next/app';
 
