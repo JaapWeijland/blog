@@ -14,6 +14,4 @@ export const Singular: ComponentStory<typeof Logo> = (args) => (
     <Logo {...args} />
 );
 
-Singular.args = {
-    children: 'Show all',
-};
+Singular.args = {};
