@@ -1,5 +1,5 @@
 import { IBlogRepository } from '@blog/data-access/blogs/repositories/blog-repository';
-import { localBlogRepository } from '@blog/data-access/blogs/repositories/local-blog-repository';
+import { contentfulBlogRepository } from '@blog/data-access/blogs/repositories/contentful-blog-repository';
 import { Blog } from '../models/Blog';
 
 export class BlogService {
@@ -26,4 +26,4 @@ export class BlogService {
     }
 }
 
-export const blogService = new BlogService(localBlogRepository);
+export const blogService = new BlogService(contentfulBlogRepository);

@@ -6,7 +6,7 @@ export interface ButtonBaseProps {
 
 export const ButtonBase = ({ children }: ButtonBaseProps) => {
     return (
-        <div className="px-6 py-2 rounded-full bg-neutral-700 text-neutral-200 font-light hover:bg-neutral-600 transition-colors">
+        <div className="px-6 py-1 rounded-full bg-neutral-700 text-neutral-200 font-light hover:bg-neutral-600 transition-colors">
             {children}
         </div>
     );

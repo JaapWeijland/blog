@@ -1,7 +1,7 @@
 import { useGetAllBlogsQuery } from '@blog/presentation/queries/blogs/get-all-blogs';
 import { toReadableDateTime } from '@blog/presentation/utils/time';
+import { PageSection } from '../../shared/molecules/PageSection';
 import { BlogItem } from '../molecules/BlogItem';
-import { BlogsSection } from './BlogsSection';
 
 export interface BlogsPageBlogsSectionProps {}
 
@@ -9,7 +9,7 @@ export const BlogsPageBlogsSection = ({}: BlogsPageBlogsSectionProps) => {
     const { data: blogs } = useGetAllBlogsQuery();
 
     return (
-        <BlogsSection title="Blogs">
+        <PageSection title="Blogs">
             {blogs?.map((blog) => {
                 return (
                     <BlogItem
@@ -21,6 +21,6 @@ export const BlogsPageBlogsSection = ({}: BlogsPageBlogsSectionProps) => {
                     />
                 );
             })}
-        </BlogsSection>
+        </PageSection>
     );
 };

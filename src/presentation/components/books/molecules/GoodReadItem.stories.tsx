@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Tag } from '../../shared/atoms/Tag';
+import { LinkButton } from '../../shared/atoms/Button';
 import { GoodReadItem } from './GoodReadItem';
 
 export default {
@@ -23,11 +23,14 @@ Singular.args = {
     slots: {
         buttons: (
             <>
-                <Tag>react.js</Tag>
-                <Tag>next.js</Tag>
-                <Tag>tailwind</Tag>
-                <Tag>graphql</Tag>
+                <LinkButton to="/">react.js</LinkButton>
+                <LinkButton to="/">next.js</LinkButton>
             </>
         ),
+    },
+    to: '/',
+    image: {
+        src: 'https://media.s-bol.com/NkMzMgDyNJEL/801x1200.jpg',
+        alt: 'art',
     },
 };

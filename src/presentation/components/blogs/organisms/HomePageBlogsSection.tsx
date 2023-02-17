@@ -1,8 +1,8 @@
 import { useGetRecentBlogsQuery } from '@blog/presentation/queries/blogs/get-recent-blogs';
 import { toReadableDateTime } from '@blog/presentation/utils/time';
 import { LinkButton } from '../../shared/atoms/Button';
+import { PageSection } from '../../shared/molecules/PageSection';
 import { BlogItem } from '../molecules/BlogItem';
-import { BlogsSection } from './BlogsSection';
 
 export interface HomePageBlogsSectionProps {}
 
@@ -10,7 +10,7 @@ export const HomePageBlogsSection = ({}: HomePageBlogsSectionProps) => {
     const { data: blogs, isLoading } = useGetRecentBlogsQuery();
 
     return (
-        <BlogsSection
+        <PageSection
             title={'Latest Blogs'}
             slots={{
                 bottom: blogs?.length ? (
@@ -37,6 +37,6 @@ export const HomePageBlogsSection = ({}: HomePageBlogsSectionProps) => {
                     later!
                 </p>
             )}
-        </BlogsSection>
+        </PageSection>
     );
 };

@@ -1,4 +1,5 @@
 import { HomePageBlogsSection } from '@blog/presentation/components/blogs/organisms/HomePageBlogsSection';
+import { HomePageGoodReadsSection } from '@blog/presentation/components/books/organisms/HomePageGoordReadsSection';
 import { getRecentBlogsQuery } from '@blog/presentation/queries/blogs/get-recent-blogs';
 import { dehydrate, QueryClient } from '@tanstack/react-query';
 import { GetStaticProps } from 'next';
@@ -19,8 +20,10 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <HomePageBlogsSection />
+            <div className="flex flex-col items-stretch gap-40">
+                <HomePageBlogsSection />
+                <HomePageGoodReadsSection />
+            </div>
         </>
     );
 }

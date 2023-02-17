@@ -1,6 +1,6 @@
-import { Heading } from '../../shared/atoms/Heading';
+import { Heading } from '../atoms/Heading';
 
-export interface BlogsSectionProps {
+export interface PageSectionProps {
     children: React.ReactNode;
     title?: string;
     slots?: {
@@ -8,7 +8,7 @@ export interface BlogsSectionProps {
     };
 }
 
-export const BlogsSection = ({ title, children, slots }: BlogsSectionProps) => {
+export const PageSection = ({ title, children, slots }: PageSectionProps) => {
     return (
         <div className="flex flex-col gap-12 items-stretch">
             {title && <Heading>{title}</Heading>}
