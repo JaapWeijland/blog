@@ -32,10 +32,12 @@ const object = {
 }
 \`\`\`
     `,
-        author: {
-            firstName: 'Jaap',
-            lastName: 'Weijland',
-        },
+        authors: [
+            {
+                firstName: 'Jaap',
+                lastName: 'Weijland',
+            },
+        ],
         publishedAt: DateTime.now().minus({ days: 3 }).toMillis(),
     },
     {
@@ -67,10 +69,12 @@ const object = {
 }
 \`\`\`
     `,
-        author: {
-            firstName: 'Jaap',
-            lastName: 'Weijland',
-        },
+        authors: [
+            {
+                firstName: 'Jaap',
+                lastName: 'Weijland',
+            },
+        ],
         publishedAt: DateTime.now().minus({ days: 2 }).toMillis(),
     },
     {
@@ -102,10 +106,12 @@ const object = {
 }
 \`\`\`
     `,
-        author: {
-            firstName: 'Jaap',
-            lastName: 'Weijland',
-        },
+        authors: [
+            {
+                firstName: 'Jaap',
+                lastName: 'Weijland',
+            },
+        ],
         publishedAt: DateTime.now().minus({ days: 1 }).toMillis(),
     },
 ];
