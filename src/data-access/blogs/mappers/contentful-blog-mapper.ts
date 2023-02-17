@@ -29,9 +29,6 @@ export class ContentfulBlogPostMapper implements IBlogMapper {
                     label: tag,
                 })) ?? [],
         };
-
-        console.log('Mapped blog:', blog);
-
         return blog;
     }
 }
